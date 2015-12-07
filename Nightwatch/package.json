@@ -1,0 +1,19 @@
+{
+  "name": "nightwatch-functional",
+  "version": "1.0.0",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "all": "nightwatch --reporter ./scripts/html-reporter.js",
+    "filters": "nightwatch -t tests/filtersWork.js --reporter ./scripts/html-reporter.js",
+    "select": "nightwatch -t tests/selectItem.js --reporter ./scripts/html-reporter.js",
+    "several": "nightwatch -t tests/selectSeveralItems.js --reporter ./scripts/html-reporter.js",
+    "browserstack-all": "nightwatch -e default,firefox -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js",
+    "browserstack-select": "nightwatch -e firefox -t tests/selectItem.js -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "nightwatch-html-reporter": "^1.0.3"
+  }
+}

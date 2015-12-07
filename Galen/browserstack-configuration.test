@@ -1,0 +1,17 @@
+@@ import secret.test
+
+@@ set
+  base_url http://duni.typo3konsult.se
+  browser_size "1280x1024"
+
+@@ Parameterized
+    | deviceName     | deviceType | gridArgs |
+    #| Samsung S5     | mobile     | --dc.browserName android --dc.platform "ANDROID" --dc.device "Samsung Galaxy S5" --dc.browserstack.debug true                    |
+    #| iPad Air       | tablet     | --dc.browserName iPad --dc.platform "MAC" --dc.device "iPad Air" --dc.browserstack.debug true                                    |
+    | Win-Chrome 46  | desktop    |  --size ${browser_size} --browser chrome --dc.browser_version 46.0 --dc.os Windows --dc.os_version 8.1 --dc.resolution ${browser_size} --dc.browserstack.debug true  |
+
+
+Design page with default grid on ${deviceName}
+    selenium grid ${browserstack_url} --page ${base_url} ${gridArgs}
+        run scripts/login.js
+        check specs/design-page.gspec --include ${deviceType}
