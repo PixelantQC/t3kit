@@ -1,23 +1,15 @@
 @@ set
-  base_url http://duni.typo3konsult.se
+  base_url http://samples.galenframework.com/tutorial1/tutorial1.html
 
 @@ table devices
     | deviceName | tags      | size      |
     #| Mobile     | mobile    | 360x640   |
-    #| Tablet     | tablet    | 768x1024  |
-    | Desktop    | desktop   | 1280x1024 |
+    | Tablet     | tablet    | 768x1024  |
+    #| Desktop    | desktop   | 1280x1024 |
 
 @@ parameterized using devices
 @@ groups default
-Design page with default grid on ${deviceName}
+Home Page on ${deviceName}
     ${base_url} ${size}
-        run scripts/login.js
-        check specs/design-page.gspec --include ${tags}
-
-@@ parameterized using devices
-@@ groups small
-Design page with smaller grid on ${deviceName}
-    ${base_url} ${size}
-        run scripts/login.js
-        run scripts/change-grid.js
-        check specs/design-page-changed-grid.gspec --include ${tags}
+        #run scripts/login-template.js
+        check specs/home-page.gspec --include ${tags}
