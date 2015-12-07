@@ -1,0 +1,18 @@
+{
+  "tests" : [ {
+    "name" : "Home Page on Tablet",
+    "startedAt" : 1449512038713,
+    "endedAt" : 1449512047914,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "1-home-page-on-tablet",
+    "groups" : [ "default" ],
+    "failed" : false,
+    "duration" : 9201
+  } ]
+}
