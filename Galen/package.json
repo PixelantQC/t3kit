@@ -4,9 +4,9 @@
   "scripts": {
     "all": "galen test configuration.test --htmlreport reports",
     "default": "galen test configuration.test --htmlreport reports --groups default",
-    "browserstack": "galen test browserstack-configuration.test --htmlreport browserstack_reports",
+    "bs-all": "galen test browserstack-configuration.test --htmlreport browserstack_reports",
     "report": "test -d ~/Dropbox/AutomatedTests/Project/Layout || mkdir -p ~/Dropbox/AutomatedTests/Project/Layout && cp -R reports ~/Dropbox/AutomatedTests/Project/Layout",
-    "browserstack-report": "test -d ~/Dropbox/AutomatedTests/Project/Layout || mkdir -p ~/Dropbox/AutomatedTests/Project/Layout && cp -R browserstack_reports ~/Dropbox/AutomatedTests/Project/Layout"
+    "bs-report": "test -d ~/Dropbox/AutomatedTests/Project/Layout || mkdir -p ~/Dropbox/AutomatedTests/Project/Layout && cp -R browserstack_reports ~/Dropbox/AutomatedTests/Project/Layout"
   },
   "license": "ISC"
 }

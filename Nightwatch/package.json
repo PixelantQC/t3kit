@@ -7,10 +7,10 @@
   "scripts": {
     "all": "nightwatch --reporter ./scripts/html-reporter.js",
     "default": "nightwatch -t tests/default.js --reporter ./scripts/html-reporter.js",
-    "browserstack-all": "nightwatch -e default,firefox -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js",
-    "browserstack-default": "nightwatch -e firefox -t tests/default.js -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js",
+    "bs-all": "nightwatch -e default,firefox -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js",
+    "bs-default": "nightwatch -e firefox -t tests/default.js -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js",
     "report": "test -d ~/Dropbox/AutomatedTests/Project/Functional || mkdir -p ~/Dropbox/AutomatedTests/Project/Functional && cp -R reports ~/Dropbox/AutomatedTests/Project/Functional",
-    "browserstack-report": "test -d ~/Dropbox/AutomatedTests/Project/Functional || mkdir -p ~/Dropbox/AutomatedTests/Project/Functional && cp -R browserstack_reports ~/Dropbox/AutomatedTests/Project/Functional"
+    "bs-report": "test -d ~/Dropbox/AutomatedTests/Project/Functional || mkdir -p ~/Dropbox/AutomatedTests/Project/Functional && cp -R browserstack_reports ~/Dropbox/AutomatedTests/Project/Functional"
   },
   "license": "ISC",
   "dependencies": {
