@@ -4,8 +4,10 @@
   "scripts": {
     "all": "galen test configuration.test --htmlreport reports",
     "default": "galen test configuration.test --htmlreport reports --groups default",
-    "bs-all": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups bs-default --parallel-tests 2",
-    "sl-all": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups sl-default --parallel-tests 2",
+    "bs-all": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups bs-home --parallel-tests 2",
+    "sl-all-desktop": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups sl-home-desktop --parallel-tests 8",
+    "sl-all-tablet": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups sl-home-tablet --parallel-tests 8",
+    "sl-all-mobile": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups sl-home-mobile --parallel-tests 8",
     "report": "test -d ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout || mkdir -p ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout && cp -R reports ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout",
     "bs-report": "test -d ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout || mkdir -p ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout && cp -R browserstack_reports ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout"
   },

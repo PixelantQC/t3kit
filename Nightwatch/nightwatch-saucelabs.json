@@ -29,11 +29,51 @@
       "desiredCapabilities": {
         "browserName" : "chrome",
         "platform" : "Windows 10",
-        "version" : "46",
+        "version" : "46.0",
         "screenResolution" : "1280x1024"
       }
     },
-    "firefox": {
+    "mchrome": {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName" : "chrome",
+        "platform" : "OS X 10.10",
+        "version" : "46.0",
+        "screenResolution" : "1280x1024"
+      }
+    },
+    "wfirefox" : {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName" : "firefox",
+        "platform" : "Windows 10",
+        "version" : "42.0",
+        "screenResolution" : "1280x1024"
+      }
+    },
+    "mfirefox": {
       "selenium_host" : "ondemand.saucelabs.com",
       "selenium_port" : 80,
       "username" : "${SAUCE_USER}",
@@ -50,7 +90,171 @@
         "browserName" : "firefox",
         "platform" : "OS X 10.10",
         "version" : "42.0",
-        "screenResolution" : "1600x1200"
+        "screenResolution" : "1280x1024"
+      }
+    },
+    "safari": {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName" : "safari",
+        "platform" : "OS X 10.10",
+        "version" : "8.0",
+        "screenResolution" : "1280x1024"
+      }
+    },
+    "ie10": {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName" : "internet explorer",
+        "platform" : "Windows 8",
+        "version" : "10.0",
+        "screenResolution" : "1280x1024"
+      }
+    },
+    "ie11": {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName" : "internet explorer",
+        "platform" : "Windows 8.1",
+        "version" : "11.0",
+        "screenResolution" : "1280x1024"
+      }
+    },
+    "edge": {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName" : "microsoftedge",
+        "platform" : "Windows 10",
+        "version" : "20.10240",
+        "screenResolution" : "1280x1024"
+      }
+    },
+    "piPad2": {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName" : "iPad",
+        "deviceName": "iPad 2",
+        "platform" : "OS X 10.10",
+        "version" : "9.2",
+        "deviceOrientation": "portrait"
+      }
+    },
+    "piPhone6": {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName" : "iPad",
+        "deviceName": "iPhone 6",
+        "platform" : "OS X 10.10",
+        "version" : "9.2",
+        "deviceOrientation": "portrait"
+      }
+    },
+    "pNexus7": {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName" : "android",
+        "deviceName": "Google Nexus 7 HD Emulator",
+        "platform" : "Linux",
+        "version" : "4.4",
+        "deviceOrientation": "portrait"
+      }
+    },
+    "pNexus4": {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName" : "android",
+        "deviceName": "LG Nexus 4 Emulator",
+        "platform" : "Linux",
+        "version" : "4.4",
+        "deviceOrientation": "portrait"
       }
     }
   }

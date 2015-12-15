@@ -8,7 +8,9 @@
     "all": "nightwatch --reporter ./scripts/html-reporter.js",
     "default": "nightwatch -t tests/home-page.js --reporter ./scripts/html-reporter.js",
     "bs-all": "nightwatch -e default,firefox -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js",
-    "sl-all": "nightwatch -e default,firefox -c nightwatch-saucelabs.json --reporter ./scripts/html-browserstack-reporter.js",
+    "sl-all-desktop": "nightwatch -e default,mchrome,mfirefox,wfirefox,safari,ie10,ie11,edge -c nightwatch-saucelabs.json --reporter ./scripts/html-browserstack-reporter.js",
+    "sl-all-tablet": "nightwatch -e piPad2,pNexus7 -c nightwatch-saucelabs.json --reporter ./scripts/html-browserstack-reporter.js",
+    "sl-all-mobile": "nightwatch -e piPhone6,pNexus4 -c nightwatch-saucelabs.json --reporter ./scripts/html-browserstack-reporter.js",
     "report": "test -d ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional || mkdir -p ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional && cp -R reports ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional",
     "bs-report": "test -d ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional || mkdir -p ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional && cp -R browserstack_reports ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional"
   },
