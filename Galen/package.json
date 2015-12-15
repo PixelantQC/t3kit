@@ -4,7 +4,8 @@
   "scripts": {
     "all": "galen test configuration.test --htmlreport reports",
     "default": "galen test configuration.test --htmlreport reports --groups default",
-    "bs-all": "galen test browserstack-configuration.test --htmlreport browserstack_reports",
+    "bs-all": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups bs-default --parallel-tests 2",
+    "sl-all": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups sl-default --parallel-tests 2",
     "report": "test -d ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout || mkdir -p ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout && cp -R reports ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout",
     "bs-report": "test -d ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout || mkdir -p ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout && cp -R browserstack_reports ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Layout"
   },

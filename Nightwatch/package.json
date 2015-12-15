@@ -6,9 +6,9 @@
   },
   "scripts": {
     "all": "nightwatch --reporter ./scripts/html-reporter.js",
-    "default": "nightwatch -t tests/default.js --reporter ./scripts/html-reporter.js",
+    "default": "nightwatch -t tests/home-page.js --reporter ./scripts/html-reporter.js",
     "bs-all": "nightwatch -e default,firefox -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js",
-    "bs-default": "nightwatch -e firefox -t tests/default.js -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js",
+    "sl-all": "nightwatch -e default,firefox -c nightwatch-saucelabs.json --reporter ./scripts/html-browserstack-reporter.js",
     "report": "test -d ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional || mkdir -p ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional && cp -R reports ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional",
     "bs-report": "test -d ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional || mkdir -p ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional && cp -R browserstack_reports ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional"
   },

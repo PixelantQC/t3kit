@@ -1,18 +1,31 @@
 @@ import secret.test
 
 @@ set
+  name "Testing home page layout of Project"
   base_url http://samples.galenframework.com/tutorial1/tutorial1.html
   browser_size "1280x1024"
 
-@@ table devices
-    | deviceName     | deviceType | gridArgs |
-    #| Samsung S5     | mobile     | --dc.browserName android --dc.platform "ANDROID" --dc.device "Samsung Galaxy S5" --dc.browserstack.debug true                    |
-    | iPad Air       | tablet     | --dc.browserName iPad --dc.platform "MAC" --dc.device "iPad Air" --dc.browserstack.debug true                                    |
-    #| Win-Chrome 46  | desktop    |  --size ${browser_size} --browser chrome --dc.browser_version 46.0 --dc.os Windows --dc.os_version 8.1 --dc.resolution ${browser_size} --dc.browserstack.debug true  |
+@@ table saucelabs-devices
+    | deviceName     | tags       | gridArgs |
+    | Mac-Chrome 46  | desktop    |  --size ${browser_size} --browser chrome --dc.platform "OS X 10.10" --dc.version 46.0 --dc.screenResolution ${browser_size} --dc.name ${name} |
 
-@@ parameterized using devices
-@@ groups default
+@@ table browserstack-devices
+    | deviceName     | tags | gridArgs |
+    #| Samsung S5     | mobile     | --dc.browserName android --dc.platform "ANDROID" --dc.device "Samsung Galaxy S5" --dc.browserstack.debug true                    |
+    #| iPad Air       | tablet     | --dc.browserName iPad --dc.platform "MAC" --dc.device "iPad Air" --dc.browserstack.debug true                                    |
+    | Win-Chrome 46  | desktop    |  --size ${browser_size} --browser chrome --dc.browser_version 46.0 --dc.os Windows --dc.os_version 8.1 --dc.resolution ${browser_size} --dc.name ${name} --dc.browserstack.debug true  |
+
+
+@@ parameterized using browserstack-devices
+@@ groups bs-default
 Home Page on ${deviceName}
     selenium grid ${browserstack_url} --page ${base_url} ${gridArgs}
         #run scripts/login-template.js
-        check specs/home-page.gspec --include ${deviceType}
+        check specs/home-page.gspec --include ${tags}
+
+@@ parameterized using saucelabs-devices
+@@ groups sl-default
+Home Page on ${deviceName}
+    selenium grid ${saucelabs_url} --page ${base_url} ${gridArgs}
+        #run scripts/login-template.js
+        check specs/home-page.gspec --include ${tags}
