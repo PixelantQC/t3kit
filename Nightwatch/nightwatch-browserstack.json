@@ -18,34 +18,122 @@
       "selenium_port"  : 80,
       "selenium_host"  : "hub.browserstack.com",
       "silent": true,
+      "javascriptEnabled": true,
+      "acceptSslCerts": true,
+      "username": "${BROWSERSTACK_USER}",
+      "access_key": "${BROWSERSTACK_KEY}",
       "screenshots" : {
         "enabled" : false,
         "path" : ""
       },
       "desiredCapabilities": {
         "browser" : "Chrome",
-        "browser_version" : "46.0",
+        "browser_version" : "47.0",
         "os" : "Windows",
         "os_version" : "10",
         "resolution" : "1280x1024",
-        "javascriptEnabled": true,
-        "acceptSslCerts": true,
-        "browserstack.user": "${BROWSERSTACK_USER}",
-        "browserstack.key": "${BROWSERSTACK_KEY}",
         "browserstack.debug" : "true"
       }
     },
-    "firefox": {
+    "mchrome": {
+      "desiredCapabilities": {
+        "browser" : "Chrome",
+        "browser_version" : "47.0",
+        "os" : "OS X",
+        "os_version" : "El Capitan",
+        "resolution" : "1280x1024",
+        "browserstack.debug" : "true"
+      }
+    },
+    "wfirefox": {
+      "desiredCapabilities": {
+        "browser" : "Firefox",
+        "browser_version" : "42.0",
+        "os" : "Windows",
+        "os_version" : "10",
+        "resolution" : "1280x1024",
+        "browserstack.debug" : "true"
+      }
+    },
+    "mfirefox": {
       "desiredCapabilities": {
         "browser" : "Firefox",
         "browser_version" : "42.0",
         "os" : "OS X",
         "os_version" : "El Capitan",
         "resolution" : "1280x1024",
-        "javascriptEnabled": true,
-        "acceptSslCerts": true,
-        "browserstack.user": "${BROWSERSTACK_USER}",
-        "browserstack.key": "${BROWSERSTACK_KEY}",
+        "browserstack.debug" : "true"
+      }
+    },
+    "safari": {
+      "desiredCapabilities": {
+        "browser" : "Safari",
+        "browser_version" : "9.0",
+        "os" : "OS X",
+        "os_version" : "El Capitan",
+        "resolution" : "1280x1024",
+        "browserstack.debug" : "true"
+      }
+    },
+    "ie10": {
+      "desiredCapabilities": {
+        "browser" : "IE",
+        "browser_version" : "10.0",
+        "os" : "Windows",
+        "os_version" : "8",
+        "resolution" : "1280x1024",
+        "browserstack.debug" : "true"
+      }
+    },
+    "ie11": {
+      "desiredCapabilities": {
+        "browser" : "IE",
+        "browser_version" : "11.0",
+        "os" : "Windows",
+        "os_version" : "8.1",
+        "resolution" : "1280x1024",
+        "browserstack.debug" : "true"
+      }
+    },
+    "edge": {
+      "desiredCapabilities": {
+        "browser" : "Edge",
+        "browser_version" : "12.0",
+        "os" : "Windows",
+        "os_version" : "10",
+        "resolution" : "1280x1024",
+        "browserstack.debug" : "true"
+      }
+    },
+    "piPad-Air": {
+      "desiredCapabilities": {
+        "browserName" : "iPad",
+        "platform" : "MAC",
+        "device" : "iPad Air",
+        "browserstack.debug" : "true"
+      }
+    },
+    "piPhone6": {
+      "desiredCapabilities": {
+        "browserName" : "iPhone",
+        "platform" : "MAC",
+        "device" : "iPhone 6",
+        "browserstack.debug" : "true"
+      }
+    },
+    "GalaxyTab10": {
+      "desiredCapabilities": {
+        "browserName" : "android",
+        "platform" : "ANDROID",
+        "device" : "Samsung Galaxy Tab 4 10.1",
+        "browserstack.debug" : "true"
+      }
+    },
+    "Nexus5": {
+      "desiredCapabilities": {
+        "browserName" : "android",
+        "platform" : "ANDROID",
+        "device" : "Google Nexus 5",
         "browserstack.debug" : "true"
       }
     }
