@@ -5,7 +5,7 @@ var reportPassed = function(client, done) {
   var key = client.options.accessKey;
   var jobId = client.sessionId;
   // console.log('client options:', client.options, '->', [user, key, jobId]);
-  if (user && key && jobId) {
+  if (user && key && jobId && client.globals.test_settings.selenium_host !== 'hub.browserstack.com') {
     var passed = client.currentTest.results.failed === 0;
     console.log('* updating job status:', jobId, passed);
     var url = 'https://saucelabs.com/rest/v1/' + user + '/jobs/' + jobId;

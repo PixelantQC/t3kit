@@ -30,6 +30,8 @@
       },
       "desiredCapabilities": {
         "browserName": "firefox",
+        "platform": "OS X",
+        "version": "",
         "javascriptEnabled": true,
         "acceptSslCerts": true
       }
@@ -37,6 +39,8 @@
     "safari" : {
       "desiredCapabilities": {
         "browserName": "safari",
+        "platform": "OS X",
+        "version": "",
         "javascriptEnabled": true,
         "acceptSslCerts": true
       }
@@ -44,6 +48,8 @@
     "chrome" : {
       "desiredCapabilities": {
         "browserName": "chrome",
+        "platform": "OS X",
+        "version": "",
         "javascriptEnabled": true,
         "acceptSslCerts": true
       }
