@@ -22,6 +22,12 @@ module.exports = {
       .click(searchButton)
       .pause(1000)
       .assert.containsText(mainArea, 'Night Watch', 'Found Night Watch result in main area?')
-      .end();
+      // .verify.visible(".hello");
+  },
+  after : function (browser) {
+    browser.end();
+  },
+  afterEach : function (browser, done) {
+    report.reportPassed(browser, done);
   }
 };

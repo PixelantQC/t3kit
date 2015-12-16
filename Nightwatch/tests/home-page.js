@@ -1,3 +1,4 @@
+var report = require('../scripts/report.js');
 // Objects
 
 // Search
@@ -5,7 +6,7 @@ var searchField = "input[type=text]";
 var searchButton = "button[name=btnG]";
 
 // Main area
-var mainArea = "#main"
+var mainArea = "#main";
 
 
 module.exports = {
@@ -14,7 +15,7 @@ module.exports = {
       .url('http://www.google.com')
       .waitForElementVisible('body', 1000)
       .setValue(searchField, 'nightwatch')
-      .waitForElementVisible(searchButton, 1000)
+      .waitForElementVisible(searchButton, 1000);
   },
 
   'Search for Night Watch' : function (browser) {
@@ -22,6 +23,12 @@ module.exports = {
       .click(searchButton)
       .pause(1000)
       .assert.containsText(mainArea, 'Night Watch', 'Found Night Watch result in main area?')
-      .end();
+      // .verify.visible(".hello");
+  },
+  after : function (browser) {
+    browser.end();
+  },
+  afterEach : function (browser, done) {
+    report.reportPassed(browser, done);
   }
-}
+};
