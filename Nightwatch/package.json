@@ -11,6 +11,7 @@
     "bs-all-tablet": "nightwatch -t tests/home-page.js -e piPad-Air,GalaxyTab10 -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js",
     "bs-all-mobile": "nightwatch -t tests/home-page-mobile.js -e -e piPhone6,Nexus5 -c nightwatch-browserstack.json --reporter ./scripts/html-browserstack-reporter.js",
     "sl-all-desktop": "nightwatch -t tests/home-page.js -e default,mchrome,mfirefox,wfirefox,safari,ie10,ie11,edge -c nightwatch-saucelabs.json --reporter ./scripts/html-browserstack-reporter.js",
+    "sl-all-default": "nightwatch -t tests/home-page.js -e default -c nightwatch-saucelabs.json --reporter ./scripts/html-browserstack-reporter.js",
     "sl-all-tablet": "nightwatch -t tests/home-page.js -e piPad2,pNexus7 -c nightwatch-saucelabs.json --reporter ./scripts/html-browserstack-reporter.js",
     "sl-all-mobile": "nightwatch -t tests/home-page-mobile.js -e piPhone6,pNexus4 -c nightwatch-saucelabs.json --reporter ./scripts/html-browserstack-reporter.js",
     "report": "test -d ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional || mkdir -p ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional && cp -R reports ~/Dropbox/AutomatedTests/Project/$(date +%Y-%m-%d)/Functional",

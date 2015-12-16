@@ -1,3 +1,4 @@
+var report = require('../scripts/report.js');
 // Objects
 
 // Search
@@ -6,7 +7,6 @@ var searchButton = "button[name=btnG]";
 
 // Main area
 var mainArea = "#main";
-
 
 module.exports = {
   'Open Google' : function (browser) {
@@ -21,7 +21,8 @@ module.exports = {
     browser
       .click(searchButton)
       .pause(1000)
-      .assert.containsText(mainArea, 'Night Watch', 'Found Night Watch result in main area?')
+      .assert.containsText(mainArea, 'Night Watch', 'Found Night Watch result in main area?');
+      browser.verify('body', 'Job ID is: ' + browser.sessionId);
       // .verify.visible(".hello");
   },
   after : function (browser) {

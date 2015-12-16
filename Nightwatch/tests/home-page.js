@@ -8,7 +8,6 @@ var searchButton = "button[name=btnG]";
 // Main area
 var mainArea = "#main";
 
-
 module.exports = {
   'Open Google' : function (browser) {
     browser
@@ -22,7 +21,8 @@ module.exports = {
     browser
       .click(searchButton)
       .pause(1000)
-      .assert.containsText(mainArea, 'Night Watch', 'Found Night Watch result in main area?')
+      .assert.containsText(mainArea, 'Night Watch', 'Found Night Watch result in main area?');
+      browser.verify.visible('body', 'Job ID is: ' + browser.sessionId);
       // .verify.visible(".hello");
   },
   after : function (browser) {
