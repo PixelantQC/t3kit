@@ -1,11 +1,11 @@
 # Introduction
-This is a template project which helps you to automate and check your site's **layout** with a help of [Galen Faramework](http://galenframework.com/).
+This is a [T3KIT](http://demo.t3kit.testserver.pixelant.nu/) testing project which checks **layout** with a help of [Galen Faramework](http://galenframework.com/).
 And site's **functionality** using [Nightwatch.js](http://nightwatchjs.org/).
-This project also contains configuration for selenium server to run tests locally. It also includes cloud based configuration to run your tests on web services like: [SauceLabs](https://saucelabs.com/) and [Browserstack](http://browserstack.com/).
+This project also contains configuration for selenium server to run tests locally. It also includes cloud based configuration to run tests on web services like: [SauceLabs](https://saucelabs.com/) and [Browserstack](http://browserstack.com/).
 
 
 # Installation
-To run these sample tests, you need to _setup_ your environment _first_:
+To run these tests, you need to _setup_ your environment _first_:
 
 
 ## Node and NPM
