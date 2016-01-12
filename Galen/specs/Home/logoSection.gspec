@@ -1,0 +1,38 @@
+@objects
+    # Meta Menu Bar
+    header-top                  css      .header-top
+
+    # Middle Header Section
+    header-middle               css      .header-middle
+
+    # Logo
+    logo-wrapper                css      .header-middle .header-middle__logo
+    logo                        css      .header-middle .header-middle__logo-link
+
+    # Social Icons
+    social-wrapper              css      .header-middle .header-middle__social-icons
+    social-icons-*              css      .header-middle__social-icons a span
+
+
+@groups
+    contact-elements            header-tel, header-email
+
+
+= Main section =
+    # Check Middle Menu
+    header-middle:
+        below header-top
+
+
+    # Check Logo Section
+    logo:
+        inside header-middle
+        % image file ../../images/t3kit.png, stretch, analyze-offset 5, error 50%
+
+
+    # Check Social Icons
+    social-wrapper:
+        right-of logo
+
+    social-icons-*:
+        inside social-wrapper

@@ -1,15 +1,21 @@
 @@ set
-  base_url http://samples.galenframework.com/tutorial1/tutorial1.html
+  home_url http://demo.t3kit.testserver.pixelant.nu/
 
 @@ table devices
     | deviceName | tags      | size      |
     #| Mobile     | mobile    | 360x640   |
-    | Tablet     | tablet    | 768x1024  |
-    #| Desktop    | desktop   | 1280x1024 |
+    #| Tablet     | tablet    | 768x1024  |
+    | Desktop    | desktop   | 1280x1024 |
+
 
 @@ parameterized using devices
-@@ groups default
-Home Page on ${deviceName}
-    ${base_url} ${size}
-        #run scripts/login-template.js
-        check specs/home-page.gspec --include ${tags}
+@@ groups meta-menu
+Meta menu on ${deviceName}
+    ${home_url} ${size}
+        check specs/Home/metaMenu.gspec
+
+@@ parameterized using devices
+@@ groups logo-section
+Logo Section on ${deviceName}
+    ${home_url} ${size}
+        check specs/Home/logoSection.gspec

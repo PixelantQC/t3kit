@@ -1,0 +1,75 @@
+@objects
+    # Meta Menu Bar
+    header-top                  css      .header-top
+
+    # Middle Header Section
+    header-middle               css      .header-middle
+
+    # Meta Menu Contact elements
+    header-contact              css      .header-top__contact
+    header-tel                  css      .header-top__contact .header-top__contact-tel
+    header-email                css      .header-top__contact .header-top__contact-email
+
+    # Contact Links
+    tel-link                    css       .header-top__contact .header-top__contact-tel-link
+    email-link                  css       .header-top__contact .header-top__contact-email-link
+
+    # Contact Icons
+    tel-icon                    css       .header-top__contact .icons.icon-t3-mobile
+    email-icon                  css       .header-top__contact .icons.icon-t3-mail
+
+    # Header Navigation Links
+    header-nav                  css       .nav
+    nav-first-link              css       .nav .uid-7.point-1
+    nav-second-link             css       .nav .uid-7.point-2
+    nav-third-link              css       .nav .uid-7.point-3
+
+    # Header Language Menu
+    language-menu               css       .header-top__language-menu
+
+
+@groups
+    contact-elements            header-tel, header-email
+    contact-links               tel-link, email-link
+    contact-icons               tel-icon, email-icon
+    nav-element                 nav-first-link, nav-second-link, nav-third-link
+
+
+= Main section =
+    # Check Meta Menu
+    header-top:
+        above header-middle
+
+
+    # Check Contact Section
+    header-contact:
+        inside header-top
+
+    &contact-elements:
+        inside header-contact
+
+    header-tel:
+        left-of header-email
+
+
+    # Check Links Color
+    &contact-links:
+        css color is "rgba(122, 198, 225, 1)"
+
+
+    # Check Icons Placement
+    &contact-icons:
+        inside header-contact
+        css font-size is "12px"
+
+
+    # Check Meta Menu Navigation and Language Menu
+    &nav-elements:
+        inside header-nav
+
+    header-nav:
+        right-of header-contact
+
+    language-menu:
+        inside header-top
+        right-of header-nav
