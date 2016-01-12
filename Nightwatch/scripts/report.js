@@ -4,6 +4,7 @@ var reportPassed = function(client, done) {
   var user = client.options.username;
   var key = client.options.accessKey;
   var jobId = client.sessionId;
+
   // console.log('client options:', client.options, '->', [user, key, jobId]);
   if (user && key && jobId && client.globals.test_settings.selenium_host !== 'hub.browserstack.com') {
     var passed = client.currentTest.results.failed === 0;
@@ -15,8 +16,8 @@ var reportPassed = function(client, done) {
         username: user,
         password: key
       },
-      headers: {'content-type': 'application/json'},
-      body: JSON.stringify({passed: passed})
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ passed: passed }),
     }, function(res, status, body) {
       // console.log('Sauce response:', body);
       done();
@@ -28,5 +29,5 @@ var reportPassed = function(client, done) {
 };
 
 module.exports = {
-  reportPassed: reportPassed
+  reportPassed: reportPassed,
 };

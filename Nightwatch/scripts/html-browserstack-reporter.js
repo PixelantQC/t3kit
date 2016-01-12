@@ -7,11 +7,11 @@ var timestamp = String(date) + '.html';
 var reporter = new HtmlReporter({
   openBrowser: false,
   reportsDirectory: path.resolve(__dirname, '../browserstack_reports'),
-  reportFilename: timestamp
+  reportFilename: timestamp,
 });
 
 module.exports = {
-  write : function(results, options, done) {
+  write: function(results, options, done) {
     reporter.fn(results, done);
-  }
+  },
 };

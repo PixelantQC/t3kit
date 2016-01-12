@@ -1,7 +1,7 @@
 var secret = require('./.secret.js');
 
 module.exports = {
-  login: function (browser) {
+  login: function(browser) {
     browser
       .url('http://duni.typo3konsult.se/')
       .maximizeWindow()
@@ -10,7 +10,7 @@ module.exports = {
       .setValue('input[name="tx_pxaduniqbank_duniqbanklogin[password]"]', secret.password)
       .click('input[type=submit]')
       .pause(1000)
-      .verify.title("Design")
-      .waitForElementVisible('body', 1000)
+      .verify.title('Design')
+      .waitForElementVisible('body', 1000);
   },
-}
+};
