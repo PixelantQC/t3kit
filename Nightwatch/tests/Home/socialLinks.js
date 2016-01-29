@@ -10,7 +10,7 @@ module.exports = {
   'Open t3Kit': function(browser) {
     browser
       .url(browser.globals.testingUrl)
-      .waitForElementVisible('body', 1000)
+      .waitForElementVisible('body', 2000)
       .maximizeWindow();
   },
 
@@ -27,7 +27,7 @@ module.exports = {
   'Social Links Work': function(browser) {
     browser
       .click(facebookLink)
-      .waitForElementVisible('body', 1000)
+      .waitForElementVisible('body', 2000)
       .window_handles(function(result) {
          var handle = result.value[1];
          browser.switchWindow(handle);
@@ -39,7 +39,7 @@ module.exports = {
          browser.switchWindow(handle);
        })
       .click(youtubeLink)
-      .waitForElementVisible('body', 1000)
+      .waitForElementVisible('body', 2000)
       .window_handles(function(result) {
          var handle = result.value[1];
          browser.switchWindow(handle);
@@ -52,10 +52,7 @@ module.exports = {
   },
 
   afterEach: function(browser, done) {
-    if (browser.globals.test_settings.selenium_host === ('saucelabs' || 'browserstack')) {
-      report.reportPassed(browser, done);
-    } else {
-      done();
-    }
+    report.reportPassed(browser, done);
+    done();
   },
 };

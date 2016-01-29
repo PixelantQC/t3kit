@@ -11,7 +11,7 @@ module.exports = {
   'Open t3Kit': function(browser) {
     browser
       .url(browser.globals.testingUrl)
-      .waitForElementVisible('body', 1000)
+      .waitForElementVisible('body', 2000)
       .maximizeWindow();
   },
 
@@ -28,13 +28,13 @@ module.exports = {
   'Meta Menu Nav Links Work': function(browser) {
     browser
       .click(sitemapLink)
-      .waitForElementVisible('body', 1000)
+      .waitForElementVisible('body', 2000)
       .verify.urlEquals('http://demo.t3kit.testserver.pixelant.nu/header-menu/sitemap/')
       .click(homeLink)
-      .waitForElementVisible('body', 1000)
+      .waitForElementVisible('body', 2000)
       .verify.urlEquals('http://demo.t3kit.testserver.pixelant.nu/')
       .click(loginLink)
-      .waitForElementVisible('body', 1000)
+      .waitForElementVisible('body', 2000)
       .verify.urlEquals('http://demo.t3kit.testserver.pixelant.nu/content/form-elements/login-form/');
   },
 
@@ -43,10 +43,7 @@ module.exports = {
   },
 
   afterEach: function(browser, done) {
-    if (browser.globals.test_settings.selenium_host === ('saucelabs' || 'browserstack')) {
-      report.reportPassed(browser, done);
-    } else {
-      done();
-    }
+    report.reportPassed(browser, done);
+    done();
   },
 };
